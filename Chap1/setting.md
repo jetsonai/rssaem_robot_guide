@@ -35,7 +35,12 @@ sudo apt-get install -y libopenblas-base libopenmpi-dev libomp-dev
 pip3 install ./torch/*.whl
 
 sudo dpkg -i cudss-local-tegra-repo-ubuntu2204-0.7.1_0.7.1-1_arm64.deb
+
 sudo cp /var/cudss-local-tegra-repo-ubuntu2204-0.7.1/cudss-*-keyring.gpg /usr/share/keyrings/
+
+sudo apt-get update
+
+sudo apt install -y cudss
 
 wget https://developer.download.nvidia.com/compute/cusparselt/0.8.1/local_installers/cusparselt-local-tegra-repo-ubuntu2204-0.8.1_0.8.1-1_arm64.deb
 
