@@ -17,7 +17,6 @@ np.py
 test.txt
 CHECK folder
 
-rssaem_ws
 
 
 # 배경화면 설정
@@ -85,13 +84,21 @@ pip3 install ultralytics==8.4.0 --no-deps
 # rospkgs
 
 sudo apt install ros-humble-dynamixel-sdk
+
 sudo apt install ros-humble-xacro
+
 sudo apt install ros-humble-cartographer ros-humble-cartographer-ros ros-humble-navigation2 ros-humble-nav2-bringup ros-humble-nav2-map-server
+
 sudo apt install -y ros-humble-image-transport ros-humble-image-transport-plugins ros-humble-compressed-image-transport
+
 sudo apt install ros-humble-rosbridge-suite
 
-
 ros2_app_ws
+
+rssaem_ws
+
+
+colcon build
 
 # bash.rc
 
@@ -111,6 +118,7 @@ export LDS_MODEL=LDS-04
 alias cbs='colcon build --symlink-install'
 
 # rc.local np.py 등록
+
 sudo vi /etc/rc.local
 
 
