@@ -1,4 +1,5 @@
-ㅁ파티션 확장
+# 파티션 확장
+
 lsblk
 
 sudo growpart /dev/mmcblk0 1
@@ -8,8 +9,8 @@ sudo resize2fs /dev/mmcblk0p1
 df -h
 
 https://drive.google.com/drive/folders/1B2x2TO_MVZyH2QQAmhmNoDGjR3OtvrHJ?usp=drive_link
-ㅁ6.1.2
 
+# 6.1.2
 
 remotectl1.sh
 remotectl2.sh
@@ -21,10 +22,10 @@ CHECK folder
 rssaem_ws
 
 
+# 배경화면 설정
 
-ㅁ배경화면 설정
+# ultralyitcs 준비
 
-ㅁultralyitcs 준비
 pip3 uninstall opencv-python opcv-contrib-python
 
 pip3 install 'numpy<2'
@@ -33,15 +34,9 @@ pip3 uninstall -y torch torchvision torchaudio
 
 sudo apt-get install -y libopenblas-base libopenmpi-dev libomp-dev
 
-pip3 install torch torchvision --index-url https://pypi.jetson-ai-lab.io/jp6/cu126
-
-( 
-
-*whl 인스톨 방법
 
 pip3 install ./torch/*.whl
 
-)
 
 wget https://developer.download.nvidia.com/compute/cusparselt/0.8.1/local_installers/cusparselt-local-tegra-repo-ubuntu2204-0.8.1_0.8.1-1_arm64.deb
 
@@ -53,42 +48,30 @@ sudo apt-get update
 
 sudo apt-get -y install cusparselt
 
-pip3 install onnxruntime-gpu --index-url https://pypi.jetson-ai-lab.io/jp6/cu126
-
-( 
-
-*whl 인스톨 방법
 
 pip3 install ./onnx/*.whl
 
-)
 
 
+# opencv-python
 
-ㅁopencv-python
 sudo apt install -y libatlas-base-dev
 
-pip3 install opencv-python opencv-contrib-python --index-url https://pypi.jetson-ai-lab.io/jp6/cu128
-
-*whl 인스톨 방법
-
-( 
 
 pip3 install ./opencv/*.whl
 
-)
 
 sudo apt install -y libtesseract4 tesseract-ocr
 
 
 
-*확인
+* 확인
 
 python3 -c "import cv2; print('CUDA 사용 가능 GPU 개수:', cv2.cuda.getCudaEnabledDeviceCount())"
 
 
 
-ㅁultralyitcs 설치
+# ultralyitcs 설치
 
 
 pip3 install 'numpy<2' --force-reinstall
@@ -97,10 +80,12 @@ pip3 install pyyaml tqdm matplotlib requests psutil pandas seaborn
 
 pip3 install ultralytics==8.4.0 --no-deps
 
-ㅁros
+
+#ros
 
 
-ㅁrospkgs
+# rospkgs
+
 sudo apt install ros-humble-dynamixel-sdk
 sudo apt install ros-humble-xacro
 sudo apt install ros-humble-cartographer ros-humble-cartographer-ros ros-humble-navigation2 ros-humble-nav2-bringup ros-humble-nav2-map-server
@@ -110,7 +95,8 @@ sudo apt install ros-humble-rosbridge-suite
 
 ros2_app_ws
 
-ㅁ bash.rc
+# bash.rc
+
 source /opt/ros/humble/setup.bash
 
 export PATH=/usr/local/cuda-12.6/bin:$PATH
@@ -126,29 +112,24 @@ export LDS_MODEL=LDS-04
 
 alias cbs='colcon build --symlink-install'
 
-ㅁrc.local np.py 등록
+# rc.local np.py 등록
 sudo vi /etc/rc.local
 
 
 
 #!/bin/bash
+
+`---
 # Your custom commands go here
 sleep 3
 su - nvidia -c "/bin/python3 /home/rssaem/np.py"
 exit 0
+---
 
-ㅁjtop
+# jtop
+
 sudo -v
 curl -LsSf https://raw.githubusercontent.com/rbonghi/jetson_stats/master/scripts/install_jtop_torun_without_sudo.sh | bash
-
-
-*error
-
-rssaem@rssaem:~$ jtop
-I can't access jtop.service.
-Please logout or reboot this board.
-
-->solve
 
 sudo usermod -aG jtop rssaem
 
