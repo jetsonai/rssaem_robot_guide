@@ -8,8 +8,6 @@ sudo resize2fs /dev/mmcblk0p1
 
 df -h
 
-https://drive.google.com/drive/folders/1B2x2TO_MVZyH2QQAmhmNoDGjR3OtvrHJ?usp=drive_link
-
 # 6.1.2
 
 remotectl1.sh
