@@ -142,9 +142,9 @@ export LDS_MODEL=LDS-04
 
 alias cbs='colcon build --symlink-install'
 
-```bash
 # rc.local np.py 등록
 
+```bash
 sudo vi /etc/rc.local
 
 #!/bin/bash
