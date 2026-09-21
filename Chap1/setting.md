@@ -88,7 +88,7 @@ sudo apt-get -y install cusparselt
 pip3 install ./onnx/*.whl
 
 ```python
-python3 -c "import torch; import torchvision)"
+python3 -c "import torch; import torchvision"
 ```
 
 # opencv-python
