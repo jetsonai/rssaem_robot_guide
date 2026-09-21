@@ -151,6 +151,8 @@ sudo vi /etc/rc.local
 
 # Your custom commands go here
 sleep 3
+su - nvidia -c "/bin/python3 /home/rssaem/oled.py" &
+sleep 2
 su - nvidia -c "/bin/python3 /home/rssaem/np.py"
 exit 0
 ```
