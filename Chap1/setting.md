@@ -142,20 +142,18 @@ export LDS_MODEL=LDS-04
 
 alias cbs='colcon build --symlink-install'
 
+```bash
 # rc.local np.py 등록
 
 sudo vi /etc/rc.local
 
-
-
 #!/bin/bash
 
-`---
 # Your custom commands go here
 sleep 3
 su - nvidia -c "/bin/python3 /home/rssaem/np.py"
 exit 0
----
+```
 
 # jtop
 
