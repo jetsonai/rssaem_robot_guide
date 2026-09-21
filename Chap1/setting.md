@@ -150,6 +150,7 @@ chmod +x *.sh
 ## 확인
 ```bash
 ros2 --version
+source /opt/ros/humble/setup.bash
 ```
 
 ## rospkgs 추가 설치
