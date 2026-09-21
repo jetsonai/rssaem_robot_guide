@@ -149,21 +149,18 @@ chmod +x *.sh
 
 ## 확인
 ```bash
-ros2 --version
+
 source /opt/ros/humble/setup.bash
+
 ```
 
 ## rospkgs 추가 설치
 
-sudo apt install ros-humble-dynamixel-sdk
+```bash
+install_ros_packages.sh
 
-sudo apt install ros-humble-xacro
+```
 
-sudo apt install ros-humble-cartographer ros-humble-cartographer-ros ros-humble-navigation2 ros-humble-nav2-bringup ros-humble-nav2-map-server
-
-sudo apt install -y ros-humble-image-transport ros-humble-image-transport-plugins ros-humble-compressed-image-transport
-
-sudo apt install ros-humble-rosbridge-suite
 
 ## 기본 패키지 빌드
 
