@@ -132,6 +132,7 @@ python3 yolov26trt_test_camera.py
 #ros
 ```bash
 cd
+chmod +x *.sh
 ./install_ros.sh
 ```
 
