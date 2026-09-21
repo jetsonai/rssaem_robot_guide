@@ -21,7 +21,9 @@ CHECK folder
 
 # pip install
 
+```bash
 sudo apt-get install python3-pip
+```
 
 # 그 외 설치
 
@@ -34,7 +36,8 @@ pip3 install --user adafruit-circuitpython-led-animation
 
 pip3 install adafruit-circuitpython-ssd1306
 ```
-test
+
+## test
 
 ```bash
 python3 np.py
@@ -57,6 +60,8 @@ su - rssaem -c "/bin/python3 /home/rssaem/np.py"
 exit 0
 ```
 # 배경화면 설정
+
+wallpaper.png
 
 # ultralyitcs 준비
 
@@ -100,16 +105,13 @@ python3 -c "import torch; import torchvision"
 ```
 
 # opencv-python
-
+```bash
 sudo apt install -y libatlas-base-dev
-
 
 pip3 install ./opencv/*.whl
 
-
 sudo apt install -y libtesseract4 tesseract-ocr
-
-
+```
 
 ## 확인
 ```python
@@ -119,12 +121,13 @@ python3 -c "import cv2; print('CUDA 사용 가능 GPU 개수:', cv2.cuda.getCuda
 
 # ultralyitcs 설치
 
-
+```bash
 pip3 install 'numpy<2' --force-reinstall
 
 pip3 install pyyaml tqdm matplotlib requests psutil pandas seaborn
 
 pip3 install ultralytics==8.4.0 --no-deps
+```
 
 ## opencv, camera, ultralyitcs 설치 테스트
 ```bash
@@ -136,14 +139,15 @@ python3 yolov26trt_test_camera.py
 
 ```
 
-#ros
+# ROS2 humble 설치
+
 ```bash
 cd
 chmod +x *.sh
 ./install_ros.sh
 ```
 
-# rospkgs
+## rospkgs 추가 설치
 
 sudo apt install ros-humble-dynamixel-sdk
 
