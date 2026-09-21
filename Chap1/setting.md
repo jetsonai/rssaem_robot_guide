@@ -25,8 +25,6 @@ sudo apt-get install python3-pip
 
 pip3 install --user --upgrade Jetson.GPIO Adafruit-Blinka adafruit-circuitpython-neopixel-spi playsound
 
-sudo usermod -aG gpio rssaem
-
 sudo udevadm control --reload-rules && sudo udevadm trigger
 
 pip3 install --user adafruit-circuitpython-led-animation
