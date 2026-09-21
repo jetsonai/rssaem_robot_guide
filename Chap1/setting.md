@@ -147,6 +147,11 @@ chmod +x *.sh
 ./install_ros.sh
 ```
 
+## 확인
+```bash
+ros2 --version
+```
+
 ## rospkgs 추가 설치
 
 sudo apt install ros-humble-dynamixel-sdk
