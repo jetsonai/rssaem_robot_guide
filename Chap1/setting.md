@@ -31,6 +31,9 @@ pip3 install --user adafruit-circuitpython-led-animation
 
 pip3 install adafruit-circuitpython-ssd1306
 
+`---
+python3 np.py
+---
 
 # 배경화면 설정
 
