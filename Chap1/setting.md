@@ -1,3 +1,5 @@
+# 6.1.2 이미지 로 부팅
+
 # 파티션 확장
 
 lsblk
@@ -8,13 +10,13 @@ sudo resize2fs /dev/mmcblk0p1
 
 df -h
 
-# 6.1.2
+# 파일 카피
 
-remotectl1.sh
-remotectl2.sh
+remotectl.sh
+remote_gui.sh
 testapp.py
 np.py
-test.txt
+oled.py
 CHECK folder
 
 # pip install
