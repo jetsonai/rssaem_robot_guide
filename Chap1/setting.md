@@ -17,6 +17,21 @@ np.py
 test.txt
 CHECK folder
 
+# pip install
+
+sudo apt-get install python3-pip
+
+# 그 외 설치
+
+pip3 install --user --upgrade Jetson.GPIO Adafruit-Blinka adafruit-circuitpython-neopixel-spi playsound
+
+sudo usermod -aG gpio rssaem
+
+sudo udevadm control --reload-rules && sudo udevadm trigger
+
+pip3 install --user adafruit-circuitpython-led-animation
+
+pip3 install adafruit-circuitpython-ssd1306
 
 
 # 배경화면 설정
