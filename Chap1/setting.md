@@ -120,9 +120,20 @@ pip3 install pyyaml tqdm matplotlib requests psutil pandas seaborn
 
 pip3 install ultralytics==8.4.0 --no-deps
 
+```bash
+cd
+cd CHECK
+python3 opencvtest.py
+python3 pi-camera_test.py
+python3 yolov26trt_test_camera.py
+
+```
 
 #ros
-
+```bash
+cd
+./install_ros.sh
+```
 
 # rospkgs
 
