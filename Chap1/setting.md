@@ -68,7 +68,7 @@ pip3 install ./torch/*.whl
 
 sudo dpkg -i cudss-local-tegra-repo-ubuntu2204-0.7.1_0.7.1-1_arm64.deb
 
-sudo cp /var/cudss-local-tegra-repo-ubuntu2204-0.7.1/cudss-*-keyring.gpg /usr/share/keyrings/
+dpkg 설치 후 가장 마지막에 나온 cp 명령문을 복사하여 붙혀넣고 실행시킨다.
 
 sudo apt-get update
 
@@ -78,7 +78,7 @@ wget https://developer.download.nvidia.com/compute/cusparselt/0.8.1/local_instal
 
 sudo dpkg -i cusparselt-local-tegra-repo-ubuntu2204-0.8.1_0.8.1-1_arm64.deb
 
-sudo cp /var/cusparselt-local-tegra-repo-ubuntu2204-0.8.1/cusparselt-*-keyring.gpg /usr/share/keyrings/
+dpkg 설치 후 가장 마지막에 나온 cp 명령문을 복사하여 붙혀넣고 실행시킨다.
 
 sudo apt-get update
 
