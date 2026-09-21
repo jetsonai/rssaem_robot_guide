@@ -25,6 +25,7 @@ sudo apt-get install python3-pip
 
 # 그 외 설치
 
+```bash
 pip3 install --user --upgrade Jetson.GPIO Adafruit-Blinka adafruit-circuitpython-neopixel-spi playsound
 
 sudo udevadm control --reload-rules && sudo udevadm trigger
@@ -32,6 +33,8 @@ sudo udevadm control --reload-rules && sudo udevadm trigger
 pip3 install --user adafruit-circuitpython-led-animation
 
 pip3 install adafruit-circuitpython-ssd1306
+```
+test
 
 ```bash
 python3 np.py
@@ -57,6 +60,7 @@ exit 0
 
 # ultralyitcs 준비
 
+```bash
 pip3 uninstall opencv-python opcv-contrib-python
 
 pip3 install 'numpy<2'
@@ -65,30 +69,32 @@ pip3 uninstall -y torch torchvision torchaudio
 
 sudo apt-get install -y libopenblas-base libopenmpi-dev libomp-dev
 
-
+# torch 
 pip3 install ./torch/*.whl
 
+# cudss 
 sudo dpkg -i cudss-local-tegra-repo-ubuntu2204-0.7.1_0.7.1-1_arm64.deb
 
-dpkg 설치 후 가장 마지막에 나온 cp 명령문을 복사하여 붙혀넣고 실행시킨다.
+#dpkg 설치 후 가장 마지막에 나온 cp 명령문을 복사하여 붙혀넣고 실행시킨다.
 
 sudo apt-get update
 
 sudo apt install -y cudss
 
-
-
+# cusparselt 
 sudo dpkg -i cusparselt-local-tegra-repo-ubuntu2204-0.8.1_0.8.1-1_arm64.deb
 
-dpkg 설치 후 가장 마지막에 나온 cp 명령문을 복사하여 붙혀넣고 실행시킨다.
+#dpkg 설치 후 가장 마지막에 나온 cp 명령문을 복사하여 붙혀넣고 실행시킨다.
 
 sudo apt-get update
 
 sudo apt-get -y install cusparselt
 
-
+# onnx
 pip3 install ./onnx/*.whl
+```bash
 
+## test
 ```python
 python3 -c "import torch; import torchvision"
 ```
@@ -105,7 +111,7 @@ sudo apt install -y libtesseract4 tesseract-ocr
 
 
 
-* 확인
+## 확인
 ```python
 python3 -c "import cv2; print('CUDA 사용 가능 GPU 개수:', cv2.cuda.getCudaEnabledDeviceCount())"
 ```
@@ -120,6 +126,7 @@ pip3 install pyyaml tqdm matplotlib requests psutil pandas seaborn
 
 pip3 install ultralytics==8.4.0 --no-deps
 
+## opencv, camera, ultralyitcs 설치 테스트
 ```bash
 cd
 cd CHECK
@@ -148,14 +155,19 @@ sudo apt install -y ros-humble-image-transport ros-humble-image-transport-plugin
 
 sudo apt install ros-humble-rosbridge-suite
 
-ros2_app_ws
+## 기본 패키지 빌드
 
-rssaem_ws
-
-
+```bash
+cd 
+cd ros2_app_ws
 colcon build
 
-# bash.rc
+cd
+cd rssaem_ws
+colcon build
+```
+
+# bash.rc 편집
 
 source /opt/ros/humble/setup.bash
 
@@ -171,7 +183,6 @@ export RSSAEM_MODEL=rssaem
 export LDS_MODEL=LDS-04
 
 alias cbs='colcon build --symlink-install'
-
 
 
 # jtop
