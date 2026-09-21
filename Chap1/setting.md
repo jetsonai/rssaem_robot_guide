@@ -31,12 +31,26 @@ pip3 install --user adafruit-circuitpython-led-animation
 
 pip3 install adafruit-circuitpython-ssd1306
 
-`---
+```bash
 python3 np.py
 
 python3 oled.py
----
+```
 
+# rc.local np.py 등록
+
+```bash
+sudo vi /etc/rc.local
+
+#!/bin/bash
+
+# Your custom commands go here
+sleep 3
+su - rssaem -c "/bin/python3 /home/rssaem/oled.py" &
+sleep 2
+su - rssaem -c "/bin/python3 /home/rssaem/np.py"
+exit 0
+```
 # 배경화면 설정
 
 # ultralyitcs 준비
@@ -142,20 +156,7 @@ export LDS_MODEL=LDS-04
 
 alias cbs='colcon build --symlink-install'
 
-# rc.local np.py 등록
 
-```bash
-sudo vi /etc/rc.local
-
-#!/bin/bash
-
-# Your custom commands go here
-sleep 3
-su - nvidia -c "/bin/python3 /home/rssaem/oled.py" &
-sleep 2
-su - nvidia -c "/bin/python3 /home/rssaem/np.py"
-exit 0
-```
 
 # jtop
 
