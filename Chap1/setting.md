@@ -87,7 +87,9 @@ sudo apt-get -y install cusparselt
 
 pip3 install ./onnx/*.whl
 
-
+```python
+python3 -c "import torch; import torchvision)"
+```
 
 # opencv-python
 
@@ -102,9 +104,9 @@ sudo apt install -y libtesseract4 tesseract-ocr
 
 
 * 확인
-
+```python
 python3 -c "import cv2; print('CUDA 사용 가능 GPU 개수:', cv2.cuda.getCudaEnabledDeviceCount())"
-
+```
 
 
 # ultralyitcs 설치
