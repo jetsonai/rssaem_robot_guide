@@ -11,14 +11,14 @@ firewall=false
 ```
 4. f2키 눌러서 .wslconfig.txt -> .wslconfig 로 변경
 5. powershell(관리자모드) 에서 wsl --shutdown 입력
-6. powershell(관리자모드) 에서 netsh advfirewall set allprofiles state off 입력하여 방화벽을 끄기
+6. powershell(관리자모드) 에서 **netsh advfirewall set allprofiles state off** 입력하여 방화벽을 끄기
 7. powershell(관리자모드) 에서 wsl 입력
 8. wsl 안에서 ifconfig 확인
 
 
 # 수업마친후 할일
 
-powershell(관리자모드) 에서 netsh advfirewall set allprofiles state on 입력하여 방화벽을 켜기**
+powershell(관리자모드) 에서 **netsh advfirewall set allprofiles state on** 입력하여 방화벽을 켜기
 
 
 ----------------------------------------------
