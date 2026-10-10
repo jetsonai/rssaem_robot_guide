@@ -16,7 +16,7 @@ firewall=false
 8. wsl 안에서 ifconfig 확인
 
 
-#수업마친후 할일
+# 수업마친후 할일
 
 powershell(관리자모드) 에서 netsh advfirewall set allprofiles state on 입력하여 방화벽을 켜기**
 
