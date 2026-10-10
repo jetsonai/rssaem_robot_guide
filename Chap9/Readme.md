@@ -13,3 +13,47 @@ firewall=false
 5. powershell 에서 wsl --shutdown 입력
 6. powershell 에서 wsl 입력
 7. wsl 안에서 ifconfig 확인
+
+   ----------------------------------------------
+# 발화벽 문제 해결
+
+```shell
+   user@DESKTOP-FUDPTFE:/mnt/c/WINDOWS/system32$ ros2 topic list
+/parameter_events
+/rosout
+user@DESKTOP-FUDPTFE:/mnt/c/WINDOWS/system32$ ros2 daemon stop
+The daemon has been stopped
+user@DESKTOP-FUDPTFE:/mnt/c/WINDOWS/system32$ ros2 topic list
+^Cuser@DESKTOP-FUDPTFE:/mnt/c/WINDOWS/system32$ echo $ROS_DOMAIN_ID
+30
+user@DESKTOP-FUDPTFE:/mnt/c/WINDOWS/system32$ ros2 topic list
+^Cuser@DESKTOP-FUDPTFE:/mnt/c/WINDOWS/system32$ ros2 daemon start
+The daemon has been started
+user@DESKTOP-FUDPTFE:/mnt/c/WINDOWS/system32$ ros2 topic list
+/parameter_events
+/rosout
+user@DESKTOP-FUDPTFE:/mnt/c/WINDOWS/system32$ exit
+logout
+PS C:\WINDOWS\system32> netsh advfirewall set allprofiles state off
+확인됨
+
+PS C:\WINDOWS\system32> wsl --shutdwon
+잘못된 명령줄 인수: --shutdwon
+지원되는 인수 목록을 가져오려면 'wsl.exe --help' 사용하세요.
+PS C:\WINDOWS\system32> wsl --shutdown
+PS C:\WINDOWS\system32> wsl
+user@DESKTOP-FUDPTFE:/mnt/c/WINDOWS/system32$ export ROS_DOMAIN_ID=30
+user@DESKTOP-FUDPTFE:/mnt/c/WINDOWS/system32$ ros2 daemon start
+The daemon has been started
+user@DESKTOP-FUDPTFE:/mnt/c/WINDOWS/system32$ ros2 topic list
+/cmd_vel
+/joint_states
+/odom
+/parameter_events
+/robot_description
+/rosout
+/scan
+/tf
+/tf_static
+
+```
