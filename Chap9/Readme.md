@@ -15,10 +15,10 @@ firewall=false
 7. wsl 안에서 ifconfig 확인
 
    ----------------------------------------------
-# 발화벽 문제 해결
+# 방화벽 문제 해결
 
 ```shell
-   user@DESKTOP-FUDPTFE:/mnt/c/WINDOWS/system32$ ros2 topic list
+user@DESKTOP-FUDPTFE:/mnt/c/WINDOWS/system32$ ros2 topic list
 /parameter_events
 /rosout
 user@DESKTOP-FUDPTFE:/mnt/c/WINDOWS/system32$ ros2 daemon stop
