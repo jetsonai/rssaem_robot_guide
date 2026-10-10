@@ -1,5 +1,5 @@
 
-1. c:\사용자\[현재계정]
+1. c:\사용자 \ [현재계정]
 2. 오른클릭하여 빈 .wslconfig.txt 만들기
 3. 메모장으로 .wslconfig.txt를 열고 아래 내용 복사후 저장
 <img width="386" height="347" alt="image" src="https://github.com/user-attachments/assets/99b857d0-6afd-42b7-9714-ad8c670465b0" />
